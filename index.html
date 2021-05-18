@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a757f2d5f7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Netflix</title>
+    </head>
+    <body>
+
+        <header>
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="logo netflix">
+            </a>
+
+            <ul class="navigation">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Séries</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Minha lista</a></li>
+            </ul>
+
+            <div class="search">
+                <input type="text" placeholder="Títulos, gente e gêneros">
+                <i class="fas fa-search"></i>
+            </div>
+        </header>
+
+        <div class="banner">
+            <img src="img/bg.jpg" alt="banner cidade inivisivel" class="bg">
+
+            <div class="content">
+                <img src="img/name.png" alt="titulo cidade inivisivel" class="movieTitle">
+
+                <h4>
+                    <span>2021</span>
+                    <span><i>16+</i></span>
+                    <span>1 Temporada</span>
+                    <span>Fantasia</span>
+                </h4>
+
+                <p>Após uma tragédia familiar, um homem descobre criaturas folclóricas vivendo entre os humanos e logo se dá conta de que elas são a resposta pra seu passado misterioso.</p>
+
+                <div class="buttons">
+                    <a href="#"><i class="fas fa-play"></i> Assistir</a>
+                    <a href="#"><i class="fas fa-plus"></i> Adicionar à Minha lista</a>
+                </div>
+            </div>
+            <a class="play" onclick="toggleVideo();"><img src="img/play.png" alt="icone play">Assista ao Trailer</a>
+        </div>
+
+        <div class="trailer">
+            <video src="img/Cidade Invisível _ Trailer oficial _ Netflix Brasil.mp4" controls="true" alt="trailer cidade invisível"></video>
+            <img src="img/close.png" class="close" alt="icone fechar" onclick="toggleVideo();">
+        </div>
+
+        <script>
+            function  toggleVideo(){
+                const trailer = document.querySelector('.trailer');
+                const video = document.querySelector('video');
+                trailer.classList.toggle('active')
+                video.currentTime = 0;
+                video.pause();
+            }
+        </script>
+    </body>
+</html>
